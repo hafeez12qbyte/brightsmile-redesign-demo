@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrightSmile Dental — Modern Family Dentistry in Dallas, TX | Book Online</title>
+<meta name="description" content="BrightSmile Dental in Dallas: gentle family and cosmetic dentistry, online booking, transparent prices, most insurance accepted. Book in 30 seconds or call (214) 555-0118.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0e7c7b; --teal-d:#0a5f5e; --ink:#0b2e35; --mint:#e7f4f1; --mint-2:#d3ebe5;
+  --bg:#fbfdfc; --card:#ffffff; --line:#dce8e4; --text:#33413f;
+  --muted:#66756f; --amber:#f2a93b;
+  --r:16px; --r-s:10px;
+  --shadow:0 16px 38px rgba(11,46,53,.13); --shadow-s:0 5px 16px rgba(11,46,53,.09);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+h1,h2,h3{color:var(--ink);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+h1{font-size:clamp(36px,5.2vw,56px)}
+h2{font-size:clamp(28px,4vw,40px)}
+h3{font-size:19.5px;font-weight:700}
+.eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:15.5px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:all .16s ease;font-family:inherit}
+.btn:active{transform:translateY(1px)}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 10px 22px rgba(14,124,123,.30)}
+.btn-teal:hover{background:var(--teal-d)}
+.btn-line{border-color:var(--line);color:var(--ink);background:#fff}
+.btn-line:hover{border-color:var(--teal);color:var(--teal)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+
+.topbar{background:var(--ink);color:#bcd8d2;font-size:13.5px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.topbar a{color:#8fe3da;text-decoration:none;font-weight:700}
+
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);transition:box-shadow .2s}
+header.site.scrolled{box-shadow:var(--shadow-s)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:40px;height:40px;border-radius:12px;background:var(--teal);display:grid;place-items:center;flex:none}
+.logo-name{font-weight:800;font-size:21px;color:var(--ink);line-height:1}
+.logo-name span{color:var(--teal)}
+.logo-sub{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;font-weight:600;font-size:15px;color:var(--ink)}
+.nav-links a:hover{color:var(--teal)}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:24px;height:3px;background:var(--ink);margin:5px 0;border-radius:2px}
+
+.hero{background:linear-gradient(180deg,var(--mint) 0%,#f4faf8 100%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;padding-top:60px;padding-bottom:70px}
+.hero p.lede{font-size:18.5px;color:#48605a;margin:18px 0 28px;max-width:32em}
+.hero-cta{display:flex;gap:13px;flex-wrap:wrap}
+.hero-proof{display:flex;align-items:center;gap:12px;margin-top:28px}
+.hero-proof .stars{color:var(--amber);letter-spacing:2px;font-size:15px}
+.hero-proof p{font-size:14.5px;color:#48605a}
+.hero-media{position:relative}
+.hero-media img{border-radius:22px;box-shadow:var(--shadow);aspect-ratio:4/3.3;object-fit:cover;width:100%}
+.hero-card{position:absolute;left:-20px;bottom:22px;background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:14px 18px;display:flex;gap:12px;align-items:center}
+.hero-card .hc-big{font-weight:800;color:var(--ink);font-size:17px;line-height:1.2}
+.hero-card .hc-small{font-size:12.5px;color:var(--muted);font-weight:600}
+
+section.block{padding:76px 0}
+.sec-head{max-width:620px;margin-bottom:40px}
+.sec-head p{color:var(--muted);margin-top:10px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+.insurance{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.insurance .wrap{display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
+.insurance .i-lab{font-weight:800;color:var(--ink);font-size:14px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.i-chips{display:flex;gap:9px;flex-wrap:wrap}
+.i-chips span{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:7px 16px;font-weight:700;font-size:14px;color:#48605a}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;transition:transform .18s,box-shadow .18s}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.svc-icon{width:50px;height:50px;border-radius:14px;background:var(--mint);display:grid;place-items:center;margin-bottom:15px}
+.svc p{color:var(--muted);font-size:15px;margin:7px 0 12px}
+.svc .p{font-weight:800;color:var(--ink);font-size:15px}
+.svc .p span{color:var(--teal)}
+
+.smile-sec{background:var(--ink);color:#cfe2dc}
+.smile-sec .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:center}
+.smile-sec h2{color:#fff}
+.smile-sec img{border-radius:22px;box-shadow:var(--shadow);aspect-ratio:4/3.4;object-fit:cover;width:100%}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.stat .n{font-size:30px;font-weight:800;color:#fff}
+.stat .n em{font-style:normal;color:#8fe3da}
+.stat .l{font-size:13px;color:#9db8b1;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+
+.team .wrap{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.team img{border-radius:22px;box-shadow:var(--shadow);aspect-ratio:4/3.2;object-fit:cover;width:100%}
+.team p{color:var(--muted);margin-top:14px}
+.team ul{list-style:none;margin-top:20px;display:grid;gap:11px}
+.team li{display:flex;gap:11px;align-items:flex-start}
+.team li svg{flex:none;margin-top:4px}
+
+.reviews{background:var(--mint)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:#fff;border-radius:var(--r);padding:28px 26px;box-shadow:var(--shadow-s)}
+.rev .stars{color:var(--amber);letter-spacing:2px;margin-bottom:11px}
+.rev p{font-size:15.5px}
+.rev .who{margin-top:16px;font-weight:800;color:var(--ink);font-size:14.5px}
+.rev .meta{font-size:13px;color:var(--muted)}
+
+.book .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:start}
+.visit-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-top:22px}
+.visit-card table{width:100%;border-collapse:collapse;font-size:15px}
+.visit-card td{padding:7px 0;border-bottom:1px solid var(--line)}
+.visit-card td:last-child{text-align:right;font-weight:700;color:var(--ink)}
+.visit-card tr:last-child td{border-bottom:0}
+form.bk{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:var(--shadow)}
+form.bk h3{font-size:23px;margin-bottom:4px}
+form.bk .f-sub{color:var(--muted);font-size:14.5px;margin-bottom:20px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f-group{margin-bottom:14px}
+.f-group label{display:block;font-weight:700;font-size:14px;color:var(--ink);margin-bottom:6px}
+.f-group input,.f-group select{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--r-s);font-family:inherit;font-size:15.5px;background:#fff;color:var(--text)}
+.f-group input:focus,.f-group select:focus{border-color:var(--teal);outline:none;box-shadow:0 0 0 3px rgba(14,124,123,.16)}
+form.bk .btn{width:100%;justify-content:center}
+.form-ok{display:none;background:#e9f7ee;border:1px solid #bfe3cd;color:#14532d;border-radius:var(--r-s);padding:14px 16px;font-weight:600;margin-top:16px;font-size:15px}
+.form-ok.show{display:block}
+
+footer{background:var(--ink);color:#9db8b1;padding:54px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:34px;padding-bottom:40px}
+footer h4{color:#fff;font-size:16.5px;margin-bottom:13px;font-weight:800}
+footer ul{list-style:none;display:grid;gap:9px;font-size:14.5px}
+footer a{color:#9db8b1;text-decoration:none}
+footer a:hover{color:#8fe3da}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:17px 0;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo-note{color:#6d8a83}
+
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);padding:10px 14px;gap:10px}
+.callbar a{flex:1;text-align:center;padding:13px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15.5px}
+.callbar .cb-call{background:#fff;color:var(--ink)}
+.callbar .cb-book{background:var(--teal);color:#fff}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:1020px){.services-grid,.rev-grid{grid-template-columns:repeat(2,1fr)}.foot-grid{grid-template-columns:1fr 1fr}.hero-card{left:8px}}
+@media(max-width:860px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 22px 16px;border-bottom:1px solid var(--line);box-shadow:var(--shadow-s)}
+  .nav-links.open{display:flex}
+  .nav-links li{padding:9px 0;border-bottom:1px solid var(--mint)}
+  .burger{display:block}
+  .hero .wrap,.smile-sec .wrap,.team .wrap,.book .wrap{grid-template-columns:1fr}
+  .callbar{display:flex}
+  body{padding-bottom:64px}
+}
+@media(max-width:560px){.services-grid,.rev-grid{grid-template-columns:1fr}.f-row{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr);gap:10px}section.block{padding:56px 0}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>8820 Forest Lane, Suite 210, Dallas, TX</span>
+    <span>Open today until 6 PM · <a href="tel:+12145550118">(214) 555-0118</a></span>
+  </div>
+</div>
+
+<header class="site" id="siteHeader">
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <span class="logo-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3.5c-1.6-1.3-3.2-2-5-2C4 1.5 2.5 3.6 2.9 6.2c.3 2.1 1.2 3.4 1.7 5.1.4 1.6.6 4.4 1 6.6.3 1.7 2 1.9 2.6.4.6-1.4 1-4 3.8-4s3.2 2.6 3.8 4c.6 1.5 2.3 1.3 2.6-.4.4-2.2.6-5 1-6.6.5-1.7 1.4-3 1.7-5.1C21.5 3.6 20 1.5 17 1.5c-1.8 0-3.4.7-5 2Z" fill="#fff" transform="scale(0.92) translate(1,1)"/></svg></span>
+      <span><span class="logo-name">Bright<span>Smile</span></span><br><span class="logo-sub">Dental · Dallas</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Our Team</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#visit">Visit Us</a></li>
+    </ul>
+    <a class="btn btn-teal" href="#book" style="padding:11px 22px">Book Appointment</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Family &amp; Cosmetic Dentistry · Dallas</p>
+      <h1>Gentle dentistry, booked in 30 seconds.</h1>
+      <p class="lede">No phone tag, no paper forms, no surprises. See real prices, pick a time that suits you, and meet a team that explains everything before anything happens to your teeth.</p>
+      <div class="hero-cta">
+        <a class="btn btn-teal" href="#book">Book an Appointment</a>
+        <a class="btn btn-line" href="tel:+12145550118">Call (214) 555-0118</a>
+      </div>
+      <div class="hero-proof">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <p><strong style="color:var(--ink)">4.9</strong> from 860+ Dallas patients · Same-week appointments</p>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="clinic.jpg" alt="The bright, modern BrightSmile Dental reception">
+      <div class="hero-card">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0e7c7b" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <div><div class="hc-big">Next opening: Tomorrow, 9:40 AM</div><div class="hc-small">Real-time availability, confirmed instantly</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="insurance">
+  <div class="wrap">
+    <span class="i-lab">We accept most insurance</span>
+    <div class="i-chips"><span>Delta Dental</span><span>Cigna</span><span>Aetna</span><span>MetLife</span><span>Guardian</span><span>BlueCross</span><span>+ payment plans</span></div>
+  </div>
+</div>
+
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Services &amp; Prices</p>
+      <h2>Know the price before you sit in the chair</h2>
+      <p>Our most common treatments, with honest starting prices. Your exact quote is confirmed before treatment — always.</p>
+    </div>
+    <div class="services-grid">
+      <article class="svc reveal">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e7c7b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Exam &amp; Cleaning</h3><p>Full exam, digital X-rays, polish and a personal care plan — the visit that prevents expensive ones.</p>
+        <div class="p">New patient special <span>$89</span></div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e7c7b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+        <h3>Teeth Whitening</h3><p>In-office whitening in about an hour, up to 6 shades brighter — with sensitivity care included.</p>
+        <div class="p">From <span>$299</span></div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e7c7b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M7 4h13v13"/></svg></div>
+        <h3>Invisible Aligners</h3><p>Straighten discreetly with clear aligners and a 3D preview of your future smile before you commit.</p>
+        <div class="p">From <span>$2,900</span> · plans available</div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e7c7b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4 0-6.5-2.6-6.5-6.2 0-2.5 1.4-4.4 3.3-5.1C9.6 7.6 10.7 7 12 7s2.4.6 3.2 2.7c1.9.7 3.3 2.6 3.3 5.1C18.5 18.4 16 21 12 21Z"/><path d="M12 7c0-2 1-3.4 2.8-4"/></svg></div>
+        <h3>Implants &amp; Crowns</h3><p>Permanent, natural-feeling replacements — planned digitally, placed gently, guaranteed for 5 years.</p>
+        <div class="p">Crowns from <span>$950</span></div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e7c7b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.5 7 21l5-2.4L17 21l-1.5-7.5"/></svg></div>
+        <h3>Kids' Dentistry</h3><p>Friendly first visits, sealants and fluoride — short, gentle appointments kids actually ask for.</p>
+        <div class="p">First visit <span>free under 5</span></div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e7c7b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2Z"/></svg></div>
+        <h3>Emergency Care</h3><p>Toothache, chipped tooth, lost crown? Same-day emergency slots are held open every morning.</p>
+        <div class="p">Same-day <span>from $59</span> exam</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block smile-sec">
+  <div class="wrap">
+    <div class="reveal"><img src="smile.jpg" alt="A BrightSmile patient with a bright, healthy smile"></div>
+    <div class="reveal">
+      <p class="eyebrow" style="color:#8fe3da">Why Patients Switch to Us</p>
+      <h2>Dentistry that respects your time, wallet and nerves</h2>
+      <p style="margin-top:14px">Evening and Saturday hours. Text reminders instead of phone tag. Netflix in the chair and noise-canceling headphones if you'd rather not hear a thing. And a written price before we begin — every single time.</p>
+      <div class="stats">
+        <div class="stat"><div class="n">27<em>yrs</em></div><div class="l">Serving Dallas</div></div>
+        <div class="stat"><div class="n">15k<em>+</em></div><div class="l">Happy patients</div></div>
+        <div class="stat"><div class="n">4.9<em>★</em></div><div class="l">Average rating</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block team" id="team">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Meet Your Dentist</p>
+      <h2>Dr. Sarah Keller, DDS</h2>
+      <p>Dr. Keller took over BrightSmile from her father, Dr. Robert Keller, in 2016 — and has spent the years since making the practice gentler, clearer and easier to book. She leads a team of two dentists and four hygienists.</p>
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0e7c7b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Texas A&amp;M College of Dentistry, honors graduate</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0e7c7b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Certified in clear aligners and implant restoration</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0e7c7b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Known for painless injections — yes, really</li>
+      </ul>
+    </div>
+    <div class="reveal"><img src="dentist.jpg" alt="Dr. Keller examining a patient at BrightSmile Dental"></div>
+  </div>
+</section>
+
+<section class="block reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow">Patient Reviews</p>
+      <h2>Rated 4.9 across 860+ reviews</h2>
+      <p>Sample reviews shown in the style of our Google profile.</p>
+    </div>
+    <div class="rev-grid">
+      <article class="rev reveal"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><p>"Booked at 9 PM from my couch, was in the chair at 9:40 the next morning. They showed me the price on a screen before starting. Why isn't every dentist like this?"</p><div class="who">Marcus W.</div><div class="meta">North Dallas · Emergency visit</div></article>
+      <article class="rev reveal"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><p>"I avoided dentists for six years out of fear. Dr. Keller never made me feel judged — just a clear plan, in stages I could afford. My smile is unrecognizable now."</p><div class="who">Elena R.</div><div class="meta">Richardson · Aligners</div></article>
+      <article class="rev reveal"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><p>"My 4-year-old asks when she gets to go back to the dentist. Enough said. Text reminders and Saturday hours make it easy for our whole family."</p><div class="who">The Nguyen Family</div><div class="meta">Plano · Kids' dentistry</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="block book" id="book">
+  <div class="wrap">
+    <div class="reveal" id="visit">
+      <p class="eyebrow">Book a Visit</p>
+      <h2>Pick a time — we'll confirm by text</h2>
+      <p style="color:var(--muted);margin-top:10px">No account, no phone call needed. New patients: your first exam, cleaning and X-rays are $89.</p>
+      <div class="visit-card">
+        <h3 style="margin-bottom:10px">Hours &amp; location</h3>
+        <table>
+          <tr><td>Mon – Thu</td><td>8 AM – 6 PM</td></tr>
+          <tr><td>Friday</td><td>8 AM – 4 PM</td></tr>
+          <tr><td>Saturday</td><td>9 AM – 2 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="margin-top:14px;font-size:14.5px;color:var(--muted)">8820 Forest Lane, Suite 210, Dallas, TX 75243<br>Free parking behind the building · DART Forest Lane station, 4 min walk</p>
+      </div>
+    </div>
+    <form class="bk reveal" id="bkForm" novalidate>
+      <h3>Request an appointment</h3>
+      <p class="f-sub">Takes 30 seconds. We reply by text within the hour during opening times.</p>
+      <div class="f-row">
+        <div class="f-group"><label for="bName">Your name</label><input id="bName" type="text" placeholder="Jordan Miller" required></div>
+        <div class="f-group"><label for="bPhone">Mobile phone</label><input id="bPhone" type="tel" placeholder="(214) 555-0100" required></div>
+      </div>
+      <div class="f-row">
+        <div class="f-group"><label for="bSvc">Reason for visit</label>
+          <select id="bSvc" required>
+            <option value="">Choose…</option>
+            <option>Exam &amp; cleaning ($89 new patient)</option>
+            <option>Tooth pain / emergency</option>
+            <option>Whitening</option>
+            <option>Aligners consultation</option>
+            <option>Kids' visit</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="f-group"><label for="bWhen">Preferred day</label><input id="bWhen" type="date" required></div>
+      </div>
+      <div class="f-group"><label for="bIns">Insurance <span style="color:var(--muted);font-weight:500">(optional)</span></label>
+        <select id="bIns">
+          <option value="">Select if you have one…</option>
+          <option>Delta Dental</option><option>Cigna</option><option>Aetna</option>
+          <option>MetLife</option><option>Guardian</option><option>BlueCross</option><option>No insurance — ask about plans</option>
+        </select>
+      </div>
+      <button class="btn btn-teal" type="submit">Request This Appointment</button>
+      <div class="form-ok" id="formOk" role="status">You're booked in — request received. We'll text you shortly to confirm the exact time. Need us sooner? Call (214) 555-0118.</div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>BrightSmile Dental</h4>
+        <p style="font-size:14.5px;max-width:30em">Gentle family and cosmetic dentistry in Dallas — transparent prices, online booking, and a team that treats you like a person, not a chart.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="#services">Exam &amp; cleaning</a></li><li><a href="#services">Whitening</a></li><li><a href="#services">Invisible aligners</a></li><li><a href="#services">Implants &amp; crowns</a></li><li><a href="#services">Emergency care</a></li></ul>
+      </div>
+      <div>
+        <h4>Practice</h4>
+        <ul><li><a href="#team">Meet Dr. Keller</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#visit">Hours &amp; location</a></li><li><a href="#book">Book online</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="tel:+12145550118">(214) 555-0118</a></li><li>8820 Forest Lane, Suite 210</li><li>Dallas, TX 75243</li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> BrightSmile Dental. All rights reserved.</span>
+      <span class="demo-note">Concept website designed &amp; built by Hafeez Shoukat as a portfolio demonstration.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="cb-call" href="tel:+12145550118">Call Us</a>
+  <a class="cb-book" href="#book">Book Online</a>
+</div>
+
+<script>
+(function(){
+  var header=document.getElementById('siteHeader');
+  window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>8);},{passive:true});
+  var burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+  burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o?'true':'false');});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A'){links.classList.remove('open');burger.setAttribute('aria-expanded','false');}});
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  var form=document.getElementById('bkForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ids=['bName','bPhone','bSvc','bWhen'],valid=true;
+    ids.forEach(function(id){var f=document.getElementById(id);if(!f.value.trim()){valid=false;f.style.borderColor='#c0392b';}else{f.style.borderColor='';}});
+    if(!valid)return;
+    document.getElementById('formOk').classList.add('show');
+    form.querySelector('button[type=submit]').textContent='Request Sent ✓';
+  });
+  var d=document.getElementById('bWhen');
+  if(d){var t=new Date();d.min=t.toISOString().split('T')[0];}
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

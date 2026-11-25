@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Redesign: Before &amp; After — BrightSmile Dental | Hafeez Shoukat</title>
+<meta name="description" content="A complete before-and-after website redesign concept by Hafeez Shoukat: a dental practice's dated 2009 website rebuilt as a modern, mobile-friendly site with online booking and transparent pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12181b; --panel:#1b2226; --line:#2b353b; --text:#d6dee2; --muted:#8fa0a8;
+  --teal:#2dd4bf; --teal-d:#14b8a6; --amber:#f5b04c; --white:#ffffff;
+  --r:16px;
+  --shadow:0 24px 60px rgba(0,0,0,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--ink);color:var(--text);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:'Sora',sans-serif;color:var(--white);line-height:1.16;letter-spacing:-.01em}
+h1{font-size:clamp(32px,4.6vw,50px);font-weight:800}
+h2{font-size:clamp(26px,3.6vw,36px);font-weight:700}
+h3{font-size:18px;font-weight:700}
+.eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:all .16s;font-family:inherit}
+.btn-teal{background:var(--teal);color:#062a26}
+.btn-teal:hover{background:var(--teal-d)}
+.btn-line{border-color:var(--line);color:var(--white);background:transparent}
+.btn-line:hover{border-color:var(--teal);color:var(--teal)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+
+.hero{padding:64px 0 10px;text-align:center}
+.hero p.lede{max-width:44em;margin:18px auto 0;color:var(--muted);font-size:18px}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.chips span{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:8px 17px;font-weight:700;font-size:14px;color:var(--text)}
+.chips span b{color:var(--teal)}
+
+.compare{padding:38px 0 8px}
+.stage{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:#fff;height:660px}
+.stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.stage .after-wrap{position:absolute;inset:0}
+.stage .before-wrap{position:absolute;inset:0;z-index:2}
+.stage .before-wrap iframe{pointer-events:none}
+.tag{position:absolute;top:14px;z-index:5;font-family:'Sora',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;padding:7px 15px;border-radius:999px}
+.tag-before{left:14px;background:#b03a2e;color:#fff}
+.tag-after{right:14px;background:var(--teal);color:#062a26}
+.divider{position:absolute;top:0;bottom:0;z-index:4;width:3px;background:var(--white);box-shadow:0 0 0 1px rgba(0,0,0,.25);pointer-events:none}
+.divider .knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.35);display:grid;place-items:center;color:#12181b;font-weight:800;font-size:15px}
+input[type=range].slider{position:absolute;inset:0;z-index:6;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.stage-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.hint{text-align:center;color:var(--muted);font-size:14px;margin-top:12px}
+
+section.block{padding:70px 0}
+.sec-head{max-width:640px;margin-bottom:38px}
+.sec-head p{color:var(--muted);margin-top:10px}
+.changes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.chg{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.chg .row{display:flex;gap:10px;align-items:flex-start;margin-top:12px;font-size:15px}
+.chg .row .lab{flex:none;font-size:11px;font-weight:800;letter-spacing:.1em;padding:3px 9px;border-radius:6px;margin-top:2px}
+.lab-b{background:#4a2320;color:#f1948a}
+.lab-a{background:#0d3a34;color:#5eead4}
+.chg .row p{color:var(--text)}
+.chg .row.why p{color:var(--muted)}
+.chg .row.why .lab{background:#2b353b;color:#c8d4da}
+
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.step .n{font-family:'Sora',sans-serif;font-size:30px;font-weight:800;color:var(--teal);margin-bottom:8px}
+.step p{color:var(--muted);font-size:15px;margin-top:6px}
+
+.cta{background:linear-gradient(135deg,#0d3a34,#123f3a);border:1px solid #175048;border-radius:20px;padding:44px;text-align:center}
+.cta p{color:#a7c8c1;max-width:38em;margin:12px auto 24px}
+
+footer{border-top:1px solid var(--line);padding:26px 0 90px;margin-top:70px;color:var(--muted);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer a{color:var(--teal);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media(max-width:860px){.changes,.process{grid-template-columns:1fr}.stage{height:560px}.cta{padding:32px 22px}}
+</style>
+</head>
+<body>
+
+<div class="wrap hero">
+  <p class="eyebrow">Website Redesign · Before &amp; After</p>
+  <h1>The same dental practice.<br>A website from a different decade.</h1>
+  <p class="lede">BrightSmile Dental is a concept redesign project. I recreated the practice's dated 2009 website — then rebuilt it the way patients expect in 2026: mobile-first, transparent prices, and an appointment booked in 30 seconds instead of a phone call during office hours.</p>
+  <div class="chips">
+    <span><b>Before:</b> call-only booking</span>
+    <span><b>After:</b> online booking form</span>
+    <span><b>Before:</b> broken on phones</span>
+    <span><b>After:</b> fully responsive</span>
+    <span><b>Before:</b> "call for prices"</span>
+    <span><b>After:</b> prices on the page</span>
+  </div>
+</div>
+
+<div class="wrap compare">
+  <div class="stage" id="stage">
+    <div class="after-wrap"><iframe src="new.html" title="The redesigned BrightSmile Dental website" loading="lazy"></iframe></div>
+    <div class="before-wrap" id="beforeWrap"><iframe src="old.html" title="The original 2009 BrightSmile Dental website" loading="lazy" tabindex="-1"></iframe></div>
+    <span class="tag tag-before">BEFORE · 2009</span>
+    <span class="tag tag-after">AFTER · 2026</span>
+    <div class="divider" id="divider"><span class="knob" aria-hidden="true">⇔</span></div>
+    <input class="slider" id="slider" type="range" min="0" max="100" value="50" aria-label="Compare before and after: slide to reveal the redesign">
+  </div>
+  <p class="hint">Drag the handle to compare · the "before" site is a faithful recreation — table layout, visitor counter and all</p>
+  <div class="stage-links">
+    <a class="btn btn-line" href="old.html" target="_blank" rel="noopener">Open the 2009 site</a>
+    <a class="btn btn-teal" href="new.html" target="_blank" rel="noopener">Open the redesign</a>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">What Changed</p>
+      <h2>Six changes, each one aimed at more appointments</h2>
+      <p>A redesign is not new paint. Every change below removes a reason a patient would leave and call the next dentist on Google instead.</p>
+    </div>
+    <div class="changes">
+      <article class="chg reveal"><h3>1 · Booking</h3>
+        <div class="row"><span class="lab lab-b">BEFORE</span><p>"Call during business hours. If you reach our answering machine, we'll call back in 1–2 business days."</p></div>
+        <div class="row"><span class="lab lab-a">AFTER</span><p>A 30-second online form — service, preferred day, done. Confirmed by text.</p></div>
+        <div class="row why"><span class="lab">WHY</span><p>Most patients search in the evening, when the old site could only offer a closed office.</p></div>
+      </article>
+      <article class="chg reveal"><h3>2 · Mobile experience</h3>
+        <div class="row"><span class="lab lab-b">BEFORE</span><p>A fixed 780-pixel table layout. On a phone: pinch, zoom, squint, give up.</p></div>
+        <div class="row"><span class="lab lab-a">AFTER</span><p>Fully responsive with a sticky call/book bar on every phone screen.</p></div>
+        <div class="row why"><span class="lab">WHY</span><p>Over 70% of local searches happen on phones — the old site effectively didn't exist for them.</p></div>
+      </article>
+      <article class="chg reveal"><h3>3 · Prices</h3>
+        <div class="row"><span class="lab lab-b">BEFORE</span><p>"Call the office for a complete list of services and current pricing."</p></div>
+        <div class="row"><span class="lab lab-a">AFTER</span><p>Starting prices on every service, plus a $89 new-patient special up front.</p></div>
+        <div class="row why"><span class="lab">WHY</span><p>Price is the #1 question dental patients have — and the #1 reason they don't call to ask.</p></div>
+      </article>
+      <article class="chg reveal"><h3>4 · Trust signals</h3>
+        <div class="row"><span class="lab lab-b">BEFORE</span><p>A visitor counter, a guestbook, and "best viewed in Internet Explorer 6."</p></div>
+        <div class="row"><span class="lab lab-a">AFTER</span><p>A 4.9★ rating, patient reviews, insurance logos, and the dentist's credentials.</p></div>
+        <div class="row why"><span class="lab">WHY</span><p>Patients choose healthcare on trust. The old site's signals said "abandoned"; the new ones say "booked solid."</p></div>
+      </article>
+      <article class="chg reveal"><h3>5 · Content &amp; clarity</h3>
+        <div class="row"><span class="lab lab-b">BEFORE</span><p>One giant wall of text, a scrolling marquee, and announcements from a vacation in July.</p></div>
+        <div class="row"><span class="lab lab-a">AFTER</span><p>Scannable sections: services, prices, team, reviews, hours — each one click or one scroll away.</p></div>
+        <div class="row why"><span class="lab">WHY</span><p>Visitors decide in seconds. Structure is what lets them find "emergency care" while their tooth hurts.</p></div>
+      </article>
+      <article class="chg reveal"><h3>6 · Speed &amp; search</h3>
+        <div class="row"><span class="lab lab-b">BEFORE</span><p>HTML 4 tables, no mobile support, no page descriptions — invisible to modern Google.</p></div>
+        <div class="row"><span class="lab lab-a">AFTER</span><p>Clean semantic HTML5, proper titles and descriptions, fast-loading single page.</p></div>
+        <div class="row why"><span class="lab">WHY</span><p>Google ranks mobile-friendly, fast pages higher — the redesign is built to be found, not just visited.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">How I Work</p>
+      <h2>The redesign process</h2>
+    </div>
+    <div class="process">
+      <div class="step reveal"><div class="n">01</div><h3>Audit the old site</h3><p>I list everything costing the business customers: booking friction, mobile failures, missing trust signals, slow pages.</p></div>
+      <div class="step reveal"><div class="n">02</div><h3>Rebuild around one goal</h3><p>Every section is designed to move a visitor toward one action — here, booking an appointment.</p></div>
+      <div class="step reveal"><div class="n">03</div><h3>Launch &amp; hand over</h3><p>Fast, responsive, search-ready — with the business able to update hours, prices and photos easily.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="cta reveal">
+    <h2>Is your website still the "before"?</h2>
+    <p>I redesign small-business websites so they book customers instead of losing them. This entire before/after — recreation, redesign and comparison page — was designed and built by me.</p>
+    <a class="btn btn-teal" href="new.html" target="_blank" rel="noopener">See the redesign full-screen</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>Concept redesign project by <strong style="color:#fff">Hafeez Shoukat</strong> — web designer &amp; developer for small businesses.</span>
+    <span><a href="old.html" target="_blank" rel="noopener">Before</a> · <a href="new.html" target="_blank" rel="noopener">After</a> · BrightSmile Dental is a fictional practice created for this demonstration.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var slider=document.getElementById('slider'),
+      before=document.getElementById('beforeWrap'),
+      divider=document.getElementById('divider');
+  function apply(v){
+    before.style.clipPath='inset(0 '+(100-v)+'% 0 0)';
+    divider.style.left=v+'%';
+  }
+  slider.addEventListener('input',function(){apply(parseFloat(slider.value));});
+  apply(50);
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
